@@ -3,8 +3,8 @@
 
 /1. Create a Person constructor that has three properties: name, job, and age.
 /2. Give the Person an 'exercise' method that console logs whatever you want, e.g. "Running is fun! - said no one ever".
-/3. Give the Person a 'fetchJob' method that console logs the person's name and job, e.g. "Brad is a back-end developer".
-/4. Create a Programmer constructor that inherits all the members from Person with an additional 'languages' property that is passed in and a busy property that is NOT passed in and is set to true by default.
+/3. Give the Person` a 'fetchJob' method that console logs the person's name and job, e.g. "Brad is a back-end developer".
+/4. Create a Progr`ammer constructor that inherits all the members from Person with an additional 'languages' property that is passed in and a busy property that is NOT passed in and is set to true by default.
 /5. Give the Programmer a 'completeTask' method that updates the busy property on that programmer to be false.
     And give the Programmer an 'acceptNewTask' method that updates the busy property on that programmer to be true.
 /6. Give the Programmer an 'offerNewTask' method that console logs one thing if the programmer is busy and another if the programmer is not, e.g. should initially log out "Mark can't accept any new tasks right now."
@@ -60,17 +60,17 @@ heroOfTime.languages = "SheikahScript, HylianTML, Triforce++";
 heroOfTime.printStats();
 
 Programmer.prototype.completeTask = function() {
-    busy = false;
+    this.busy = false;
     console.log("Just like that, Ganon is defeated once more!");
 }
 
 Programmer.prototype.acceptNewTask = function(){
-    busy = true;
+    this.busy = true;
     console.log("Ganon's evil has invaded Hyrule once more, Another adventure awaits!" );
 }
 
 Programmer.prototype.offerNewTask = function(){
-    if (Programmer.busy){
+    if (this.busy === true){
         console.log("Hyrule is at stake! There's no time for sidequests!");
     }
     else {
@@ -82,8 +82,10 @@ heroOfTime.offerNewTask();
 heroOfTime.completeTask();
 heroOfTime.offerNewTask();
 function learnLanguage(){
+    if (heroOfTime.languages === "SheikaScript, HylianTML, Triforce++"){
 
+    }
 }
 function listLanguages(){
-
+    
 }
