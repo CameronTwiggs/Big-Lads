@@ -60,17 +60,17 @@ heroOfTime.languages = "SheikahScript, HylianTML, Triforce++";
 heroOfTime.printStats();
 
 Programmer.prototype.completeTask = function() {
-    busy = false;
+    this.busy = false;
     console.log("Just like that, Ganon is defeated once more!");
 }
 
 Programmer.prototype.acceptNewTask = function(){
-    busy = true;
+    this.busy = true;
     console.log("Ganon's evil has invaded Hyrule once more, Another adventure awaits!" );
 }
 
 Programmer.prototype.offerNewTask = function(){
-    if (Programmer.busy){
+    if (this.busy === true){
         console.log("Hyrule is at stake! There's no time for sidequests!");
     }
     else {
@@ -82,8 +82,10 @@ heroOfTime.offerNewTask();
 heroOfTime.completeTask();
 heroOfTime.offerNewTask();
 function learnLanguage(){
+    if (heroOfTime.languages === "SheikaScript, HylianTML, Triforce++"){
 
+    }
 }
 function listLanguages(){
-
+    
 }
